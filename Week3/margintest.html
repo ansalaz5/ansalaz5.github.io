@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Snom the Pokemon</title>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+            
+            body {
+                background-color: black;
+                z-index: -9999;
+            }
+
+            .container {
+                width: 798px;
+                height: 738px;
+                margin: auto;
+                z-index: 0;
+            }
+
+            #snom-image {
+                position: relative;
+                height: 400px;
+                width: 400px;
+                background-image: url('./snom10.png');
+                background-size: cover;
+                border-radius: 50%; /*to make a perfect circle, make sure height and width make a square, otherwise it will be oblong*/
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 40px;
+                z-index: 2;
+            }
+
+            #placeholder {
+                position: relative;
+                width: 100%;
+                height: 210px;
+                background-color: #E2C800;
+                border-radius: 41px 41px 0px 0px; /*top left, top right, bottom right, bottom left*/
+                margin-top: -187px;
+                z-index: 1;
+            }
+
+
+            nav { /*navigation background*/
+                background-color: #E2C800;
+                color: black;
+                margin-top: -16px;
+                margin-bottom: 0px;
+            }
+
+            nav > ul { /*button grouping*/
+                width: 100%;
+                height: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            nav > ul > li { /*buttons positioning*/
+                padding: 38px;
+                display: inline-block;
+            }
+        
+            a { /*button styling, text, shape*/
+                background-color: black;
+
+                width: 183px;
+                height: 87px;
+                text-align: center;
+
+                border-radius: 25px;
+                border-color: black;
+                border-width: 0px;
+                border-style: none;
+
+                color: white;
+                font-family: "Playfair Display", serif;
+                font-size: 20px;
+                font-weight: 400;
+                font-style: italic;
+                text-transform: lowercase;
+                text-decoration: none;
+
+                padding: 34px 64px; /*top, bottom*/
+                margin-top: 25px;
+            }
+
+            a:hover > button {
+                background-color: #E2C800;
+                color: black;
+
+                font-family: "Playfair Display", serif;
+                font-size: 20px;
+                font-style: italic;
+                font-weight: 800;
+
+                letter-spacing: 4px;
+                text-decoration: none;
+
+                border-color: white;
+                border-width: 2px;
+                border-style: solid;
+            }
+
+            #content{
+                background-color: #E2C800;
+                margin-top: -70px;
+                padding: 20px;
+            }
+
+            #snom{
+                color: black;
+
+                font-family: "Playfair Display", serif;
+                font-size: 70px;
+                font-style: italic;
+                font-weight: 800;
+                text-align: center;
+            }
+
+            #sectionHeadings{
+                background-color: #E2C800;
+                color: white;
+
+                font-family: "Playfair Display", serif;
+                font-size: 48px;
+                font-style: italic;
+                font-weight: 800;
+                line-height: normal;
+                text-align: center;
+            }
+
+            #about {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #about::first-letter{
+                font-family: "Playfair Display", serif;
+                font-size: 48px;
+                font-weight: 800;
+                font-style: oblique;
+            }
+
+            
+        </style>
+    </head>
+
+    <body>
+        
+        <div class="container"> 
+
+            <div id="snom-image"></div>
+            <div class="content">
+               
+               
+                <nav id="navigation">
+                    <a href="#about"><button>About</button></a>
+                    <a href="#why"><button>Why</button></a>
+                    <a href="#contact"><button>Contact</button></a>
+                </nav>
+
+                <p id="snom">Snom the Singularity</p>
+
+                <section id="about">
+                    about section text here!
+                </section>
+
+
+            </div>
+
+
+
+        </div>
+
+    </body>
+
+</html>
