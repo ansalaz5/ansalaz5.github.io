@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Siggy the Kitty</title>
+
+        <style>
+            /*Notes for how to select different things in an HTML document
+            
+            ELEMENT SELECTORS: select all of a kind of element (select all images)
+
+            element {
+                property: value;
+                }
+
+            ex, select all images and set their height to 400px:
+            img{
+                height: 400px;
+                }
+            
+            -------------
+
+            ID Selectors: selects specific ids instead of whole elements
+
+            #id-name{
+                property: value;
+            }
+
+            -------------
+
+            Class Selectors: selects specific classes instead of whole elements or specific IDs
+
+            .class-name{
+                property: value;
+            }
+
+
+            --------------
+            parent-selector > child-selector/s {
+                property: value;
+            }
+
+            */
+
+            @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+            
+            body {
+                background-color: black /*makes background color*/
+            } 
+
+            img {
+                height: 400px;
+                width: 400px;
+                object-fit: cover;
+                border-radius: 50%; /*to make a perfect circle, make sure height and width make a square, otherwise it will be oblong*/
+            }
+
+            /*
+            section {
+                width: 798px;
+                height: 738px;
+                background-color: #E2C800;
+                border-radius: 41px 41px 0px 0px; /*top left, top right, bottom right, bottom left*/
+                /*border: red solid 10px; //creates a border around each section, for testing/visualization purposes
+            }
+            */
+
+            .container {
+                width: 798px
+            }
+            
+            .content {
+                width: inherent;
+                height: 738px;
+                background-color: #E2C800;
+                color: black;
+                border-radius: 41px 41px 0px 0px; /*top left, top right, bottom right, bottom left*/
+            }
+
+            .container > nav { /*within the class "content", the nav elements look like this. can declare multiple child elements at once*/
+                background-color: #E2C800;
+                color: black;
+                border: red 5px solid;
+            }
+
+            a > button { /*button shape style*/
+                background-color: black;
+
+                width: 183px;
+                height: 87px;
+                text-align: center;
+
+                border-radius: 25px;
+                border-color: black;
+                border-width: 0px;
+                border-style: none;
+            }
+
+            a > button { /* button text style*/
+                color: white;
+                font-family: "Playfair Display", serif;
+                font-weight: 400;
+                font-style: italic;
+                text-transform: lowercase;
+                text-decoration: none;
+            }
+
+            a:hover > button {
+                background-color: #E2C800;
+                color: white;
+
+                font-family: "Playfair Display", serif;
+                font-size: 20px;
+                font-style: italic;
+                font-weight: 800;
+
+                letter-spacing: 4px;
+                text-decoration: none;
+
+                border-color: white;
+                border-width: 1px;
+                border-style: solid;
+            }
+
+            #snom{
+                color: black;
+
+                font-family: "Playfair Display", serif;
+                font-size: 70px;
+                font-style: italic;
+                font-weight: 800;
+                text-align: center;
+            }
+
+            #sectionHeadings{
+                background-color: #E2C800;
+                color: white;
+
+                font-family: "Playfair Display", serif;
+                font-size: 48px;
+                font-style: italic;
+                font-weight: 800;
+                line-height: normal;
+                text-align: center;
+            }
+
+            #about {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #about::first-letter{
+                font-family: "Playfair Display", serif;
+                font-size: 48px;
+                font-weight: 800;
+                font-style: oblique;
+            }
+
+            
+        </style>
+    </head>
+
+    <body>
+        
+        <section class="container"> 
+            <img src="./snom10.png" id="snom10-picture" alt="A picture of the pokemon Snom."/>\
+            <nav id="navigation">
+            
+                <a href="#about"><button>About</button></a>
+                <a href="#why"><button>Why</button></a>
+                <a href="#contact"><button>Contact</button></a>
+                
+            </nav>
+
+            <section class="content">
+
+                <header id="snom">Snom the Singularity</header>
+
+
+                
+
+                <section id="about">
+                    <p id="sectionHeadings">about snom</p>
+                    about section text here!
+                </section>
+
+                <section id="why">
+                                    <p id="sectionHeadings">awhy???</p>
+                    why is snom?
+                </section>
+
+                <section id="contact">
+                                    <p id="sectionHeadings">yelling</p>
+                    contact your local pokemon center
+                </section>
+
+
+            </section>
+
+
+        </section>
+
+    </body>
+
+</html>
