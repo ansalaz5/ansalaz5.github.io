@@ -1,0 +1,31 @@
+*{
+
+    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+
+body{
+    background-color: bisque;
+}
+
+nav{
+    /*letter-spacing: 30%; /*not working*/
+    font-size: 36px;
+    height: 96px;
+}
+
+nav > div{
+    background-color: brown;
+}
+
+nav > div> a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
