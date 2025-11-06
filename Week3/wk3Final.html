@@ -1,16 +1,92 @@
 /*https://www.figma.com/design/iyaVmEBNU4s8ZZyBC5HdRA/Untitled?node-id=0-1&p=f&t=Ibar3kVc0B97G7Ak-0*/
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Snom</title>    
-    </head>
+<!--
+- Create a layout using either flex, grid or positions - Surprise, this will also be done anyway. 
 
-    <body>
+- Implement fonts, colors and font sizes 
+
+- Use pseudoclasses for your links 
+
+- The layout should include more than 3 (three) divs  -- THIS WILL BE ACCOMPLISHED VERY EASILY 
+
+- Create elements using padding, margins and borders (hint: buttons make this really easy) 
+
+- Position anything using one of these position types: absolute, relative or sticky
+
+- Style the elements and your layout 
+
+- Use the @media identifier to make the page responsive
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        :root{
+            --red: #FF6B6B;
+            --gray: #292F36;
+            --yellow: #F6FF96;
+            --blue: #4EA3CD;
+        }
+
+        *{
+            font-size: 12px;
+        }
+
+        body{
+            background-color: var(--gray);
+            padding: 0px;
+            margin: 0px;
+        }
 
         
 
-    </body>
+    </style>
 
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#crow">Crows</a></li>
+            <li><a href="#raven">Ravens</a></li>
+            <li><a href="#magpie">Magpies</a></li>
+            <li><a href="#bluejay">Blue Jays</a></li>
+        </ul>
+
+        <section id="avatar"></section>
+    </nav>
+
+    <section class="content">
+        <div class="cards">
+
+            <div id="crow">
+                lorem ipsum about crows
+            </div>
+
+            <div id="raven">
+                lorem ipsum about ravens
+            </div>
+
+            <div id="magpie">
+                lorem ipsum about magpies
+            </div>
+
+            <div id="bluejay">
+                lorem ipsum about bluejays
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
 
 </html>
