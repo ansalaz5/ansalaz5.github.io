@@ -1,22 +1,4 @@
-/*https://www.figma.com/design/iyaVmEBNU4s8ZZyBC5HdRA/Untitled?node-id=0-1&p=f&t=Ibar3kVc0B97G7Ak-0*/
-
-<!--
-- Create a layout using either flex, grid or positions - Surprise, this will also be done anyway. 
-
-- Implement fonts, colors and font sizes 
-
-- Use pseudoclasses for your links 
-
-- The layout should include more than 3 (three) divs  -- THIS WILL BE ACCOMPLISHED VERY EASILY 
-
-- Create elements using padding, margins and borders (hint: buttons make this really easy) 
-
-- Position anything using one of these position types: absolute, relative or sticky
-
-- Style the elements and your layout 
-
-- Use the @media identifier to make the page responsive
--->
+/*https://www.figma.com/design/iyaVmEBNU4s8ZZyBC5HdRA/Week3?node-id=0-1&p=f&t=laK26qrBJvYRHJCO-0*/
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Title Here</title>
+    <title>Sky Calculator</title>
 
     <style>
 
@@ -33,8 +15,9 @@
         :root{
             --coral: #FF6B6B;
             --charcoal: #292F36;
-            --yellow: #F6FF96;
+            --yellow: #E3FF67;
             --skyblue: #9AC4F8;
+            --aquamarine: #99EDCC;
         }
 
         *{
@@ -75,7 +58,7 @@
 
         /*NAVIGATION*/
         nav{
-            background-color: yellow;
+            background-color: var(--yellow);
             top: 0px;
             left: 0px;
             border-radius: 0rem 0rem 3rem 0rem; /*topleft, topright, bottomleft, bottomright*/
@@ -136,7 +119,6 @@
         }
 
         .cards{
-            background-color: chocolate;
             display: grid;
             grid-template-columns: auto;
             row-gap: 2rem;
@@ -149,7 +131,7 @@
         }
 
         .cards > div > h3{
-            background-color: #292F36;
+            background-color: var(--charcoal);
             color: white;
             padding-left: .5rem;
             border-radius: .50rem;
@@ -167,7 +149,7 @@
         }
 
         #about{
-            background-color: aquamarine;
+            background-color: var(--aquamarine);
         }
 
         #candles{
@@ -176,10 +158,12 @@
 
         #season{
             background-color: seagreen;
+            color: beige;
         }
 
         #event{
             background-color: slateblue;
+            color: beige;
         }
 
 
@@ -240,7 +224,6 @@
             }
             
 
-
         }
 
 
@@ -252,6 +235,7 @@
 
 
 <body>
+
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
