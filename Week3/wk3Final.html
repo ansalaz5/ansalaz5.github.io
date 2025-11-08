@@ -25,66 +25,314 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Document</title>
+    <title>Title Here</title>
 
     <style>
 
+        /*UNIVERSAL*/
         :root{
-            --red: #FF6B6B;
-            --gray: #292F36;
+            --coral: #FF6B6B;
+            --charcoal: #292F36;
             --yellow: #F6FF96;
-            --blue: #4EA3CD;
+            --skyblue: #9AC4F8;
         }
 
         *{
             font-size: 12px;
         }
 
-        body{
-            background-color: var(--gray);
-            padding: 0px;
-            margin: 0px;
+
+        /*TYPOGRAPHY*/
+        h1{
+            color: var(--charcoal);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 5rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 5.5rem;
+            text-align: center;
         }
 
-        
+        h3{
+            color: var(--charcoal);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 3rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 3.5rem;
+        }
+
+
+        /*LAYOUT*/
+
+        body{
+            background-color: var(--skyblue);
+            padding: 0px;
+            margin: 0px;
+            display: grid; /*displays nav and section(id=content) from body in a grid*/
+            grid-template-columns: 25rem auto; /*displays grid items as columns*/
+        }
+
+        /*NAVIGATION*/
+        nav{
+            background-color: yellow;
+            top: 0px;
+            left: 0px;
+            border-radius: 0rem 0rem 3rem 0rem; /*topleft, topright, bottomleft, bottomright*/
+            height: 35rem;
+            width: 15rem;
+            position: sticky;
+        }
+
+        nav > ul{
+            list-style: none; /*Removes the bullet points*/
+            margin-top: 2rem;
+        }
+
+       
+        nav > ul > li > a{
+            color: red;
+            
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 2.5rem;
+            font-style: normal;
+            font-weight: 500;
+
+            line-height: 7rem;
+            text-decoration: none;
+            text-transform: none;
+            margin-bottom: 1rem;
+            margin-left: -1.5rem;
+
+        }
+       
+        nav > ul > li > a:hover{
+            color: var(--coral);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 3rem;
+            font-style: normal;
+            font-weight: 500;
+
+            line-height: 7rem;
+            text-decoration: none;
+            text-transform: none;
+            margin-bottom: 1rem;
+            margin-left: -1.5rem;
+        }
+
+
+
+        /*CONTENT*/
+
+        .content{
+            /*background-color: #ff6b6b;*/
+            display: block;
+
+            padding-right: 5rem;
+            padding-left: 5rem;
+            padding-bottom: 5rem;
+
+            margin-right: 10rem;
+        }
+
+        .cards{
+            background-color: chocolate;
+            display: grid;
+            grid-template-columns: auto;
+            row-gap: 2rem;
+            /*grid-template: 60rem 60rem / 50% 50% /*height top row, height bottom row, width top row, width bottom row*/
+        }
+
+        .cards > div{
+            padding:1.5rem;
+            border-radius: 3rem 3rem 3rem 3rem;
+        }
+
+        .cards > div > h3{
+            background-color: #292F36;
+            color: white;
+            padding-left: .5rem;
+            border-radius: .50rem;
+            margin: 0;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .cards > div > div{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            margin: 1rem;
+        }
+
+        #about{
+            background-color: aquamarine;
+        }
+
+        #candles{
+            background-color: antiquewhite;
+        }
+
+        #season{
+            background-color: seagreen;
+        }
+
+        #event{
+            background-color: slateblue;
+        }
+
+
+        /*MEDIA STYLING*/
+        @media only screen AND (max-width: 500px) {
+            
+            body{
+                display: block;
+            }
+
+            nav{
+                position: fixed; /*COME BACK*/
+                top: 0px;
+                left: 0px;
+                border-radius: 0 0 .5rem .5rem;
+                height: 5rem;
+                width: 100vw;
+            }
+
+            nav > ul{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                row-gap: 1rem;
+                align-items: center;
+            }
+
+            nav > ul > li > a{
+                font-size: 2rem;
+                line-height: 1rem;
+                margin-bottom: 0;
+                margin-left: -1rem;
+                padding: 1.5rem;
+            }
+
+            nav > ul > li > a:hover{
+                font-size: 3rem;
+                line-height: 1rem;
+                margin-bottom: 0;
+                margin-left: -1.5rem;
+                padding: 1.5rem;
+            }
+
+            .content > h1{
+                margin-top: 7rem;
+                text-align: center;
+            }
+
+            .cards{
+                display: grid;
+                grid-template-columns: auto;
+                width: 60vw;
+
+            }
+
+            .cards > div{
+                width: 100%;
+            }
+            
+
+
+        }
+
 
     </style>
 
 </head>
 
+
+
+
 <body>
     <nav>
         <ul>
-            <li><a href="#crow">Crows</a></li>
-            <li><a href="#raven">Ravens</a></li>
-            <li><a href="#magpie">Magpies</a></li>
-            <li><a href="#bluejay">Blue Jays</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#candles">Candles</a></li>
+            <li><a href="#season">Season</a></li>
+            <li><a href="#event">Event</a></li>
         </ul>
 
-        <section id="avatar"></section>
     </nav>
 
     <section class="content">
+
+        <h1>Sky Calculator</h1>
+
         <div class="cards">
 
-            <div id="crow">
-                lorem ipsum about crows
+            <div id="about">
+                <h3>ABOUT</h3>
+
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum rutrum mauris, sit amet consequat augue iaculis vitae. Vestibulum viverra venenatis aliquam. Nullam id dictum purus, sit amet viverra ex. Donec efficitur orci id interdum tempor. Aenean maximus ut est faucibus tempus. Morbi ullamcorper metus vitae eros commodo, vehicula consectetur nisl dapibus. Praesent congue mi ut neque mattis tincidunt. Aliquam id tellus maximus, mollis lectus et, fermentum lacus. Maecenas at turpis vitae enim tincidunt tincidunt. Quisque nec molestie nulla. Nunc molestie nec neque vitae pellentesque. Sed sed feugiat ex.
+
+                    Mauris quis semper turpis. Curabitur et ex odio. Phasellus molestie placerat lectus malesuada ullamcorper. Donec eu sapien in dolor fringilla rutrum et in elit. In pellentesque lorem erat, quis iaculis elit fermentum at. Donec laoreet lectus vitae purus commodo imperdiet. Nulla posuere, ligula egestas tristique laoreet, metus nisi tempor magna, ullamcorper ullamcorper tortor diam id eros. Pellentesque fermentum urna lectus, ut condimentum quam suscipit a.
+
+                    Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse a arcu vel arcu ultricies sollicitudin sit amet sed purus. Donec nulla risus, congue a nisi sed, sollicitudin elementum mauris. Phasellus posuere ex sit amet dui dictum interdum. Nulla sit amet egestas nisl. Donec quis maximus ipsum, eget placerat tellus. Sed fringilla egestas lacinia. Sed ultrices faucibus nibh eget elementum. Aenean et sodales quam. Vivamus sodales auctor dolor, nec finibus est. Morbi vel euismod eros, nec suscipit elit. Nam aliquet, tellus a consequat congue, sem purus efficitur velit, eget pretium ante metus vel ante.
+
+                    Nulla tristique velit sed commodo egestas. Sed nulla velit, iaculis vitae justo quis, semper suscipit dui. Maecenas varius erat ac hendrerit ultricies. Vestibulum ut ipsum imperdiet turpis vestibulum vestibulum. Nam porttitor semper mi, in venenatis lorem tincidunt nec. Nullam tincidunt metus sollicitudin est viverra, a sollicitudin justo ultricies. Sed ultricies volutpat tortor, at auctor neque consectetur ut. Praesent cursus vehicula varius. Maecenas quis sem vel nibh euismod tempor et sit amet nunc. Donec a fringilla mauris, nec euismod augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer cursus ante sit amet magna lacinia accumsan.
+
+                    Pellentesque ac ornare ante. Ut pharetra turpis diam, id porta nunc molestie ac. Nulla in dui a arcu hendrerit accumsan. Proin lectus dolor, ultricies vestibulum vestibulum et, interdum in nisl. Curabitur varius ligula vel metus accumsan, sit amet viverra arcu porttitor. Suspendisse non eros eros. Morbi ut elit auctor, ullamcorper risus eu, efficitur mi. Sed aliquet vitae mauris vel sodales. Nunc id interdum metus. Suspendisse est ligula, convallis in venenatis ut, viverra suscipit massa. Duis aliquam luctus fermentum. Aenean sagittis tincidunt nunc vestibulum egestas. Aliquam sed odio non ex commodo efficitur eget sed mauris. Sed gravida elit id ultrices pulvinar. Vivamus efficitur consequat lectus vitae pulvinar.
+                </div>
             </div>
 
-            <div id="raven">
-                lorem ipsum about ravens
+            <div id="candles">
+                <h3>CANDLES</h3>
+                
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum rutrum mauris, sit amet consequat augue iaculis vitae. Vestibulum viverra venenatis aliquam. Nullam id dictum purus, sit amet viverra ex. Donec efficitur orci id interdum tempor. Aenean maximus ut est faucibus tempus. Morbi ullamcorper metus vitae eros commodo, vehicula consectetur nisl dapibus. Praesent congue mi ut neque mattis tincidunt. Aliquam id tellus maximus, mollis lectus et, fermentum lacus. Maecenas at turpis vitae enim tincidunt tincidunt. Quisque nec molestie nulla. Nunc molestie nec neque vitae pellentesque. Sed sed feugiat ex.
+
+                    Mauris quis semper turpis. Curabitur et ex odio. Phasellus molestie placerat lectus malesuada ullamcorper. Donec eu sapien in dolor fringilla rutrum et in elit. In pellentesque lorem erat, quis iaculis elit fermentum at. Donec laoreet lectus vitae purus commodo imperdiet. Nulla posuere, ligula egestas tristique laoreet, metus nisi tempor magna, ullamcorper ullamcorper tortor diam id eros. Pellentesque fermentum urna lectus, ut condimentum quam suscipit a.
+
+                    Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse a arcu vel arcu ultricies sollicitudin sit amet sed purus. Donec nulla risus, congue a nisi sed, sollicitudin elementum mauris. Phasellus posuere ex sit amet dui dictum interdum. Nulla sit amet egestas nisl. Donec quis maximus ipsum, eget placerat tellus. Sed fringilla egestas lacinia. Sed ultrices faucibus nibh eget elementum. Aenean et sodales quam. Vivamus sodales auctor dolor, nec finibus est. Morbi vel euismod eros, nec suscipit elit. Nam aliquet, tellus a consequat congue, sem purus efficitur velit, eget pretium ante metus vel ante.
+
+                    Nulla tristique velit sed commodo egestas. Sed nulla velit, iaculis vitae justo quis, semper suscipit dui. Maecenas varius erat ac hendrerit ultricies. Vestibulum ut ipsum imperdiet turpis vestibulum vestibulum. Nam porttitor semper mi, in venenatis lorem tincidunt nec. Nullam tincidunt metus sollicitudin est viverra, a sollicitudin justo ultricies. Sed ultricies volutpat tortor, at auctor neque consectetur ut. Praesent cursus vehicula varius. Maecenas quis sem vel nibh euismod tempor et sit amet nunc. Donec a fringilla mauris, nec euismod augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer cursus ante sit amet magna lacinia accumsan.
+
+                    Pellentesque ac ornare ante. Ut pharetra turpis diam, id porta nunc molestie ac. Nulla in dui a arcu hendrerit accumsan. Proin lectus dolor, ultricies vestibulum vestibulum et, interdum in nisl. Curabitur varius ligula vel metus accumsan, sit amet viverra arcu porttitor. Suspendisse non eros eros. Morbi ut elit auctor, ullamcorper risus eu, efficitur mi. Sed aliquet vitae mauris vel sodales. Nunc id interdum metus. Suspendisse est ligula, convallis in venenatis ut, viverra suscipit massa. Duis aliquam luctus fermentum. Aenean sagittis tincidunt nunc vestibulum egestas. Aliquam sed odio non ex commodo efficitur eget sed mauris. Sed gravida elit id ultrices pulvinar. Vivamus efficitur consequat lectus vitae pulvinar.
+                </div>
             </div>
 
-            <div id="magpie">
-                lorem ipsum about magpies
+            <div id="season">
+               <h3>SEASON</h3>
+                
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum rutrum mauris, sit amet consequat augue iaculis vitae. Vestibulum viverra venenatis aliquam. Nullam id dictum purus, sit amet viverra ex. Donec efficitur orci id interdum tempor. Aenean maximus ut est faucibus tempus. Morbi ullamcorper metus vitae eros commodo, vehicula consectetur nisl dapibus. Praesent congue mi ut neque mattis tincidunt. Aliquam id tellus maximus, mollis lectus et, fermentum lacus. Maecenas at turpis vitae enim tincidunt tincidunt. Quisque nec molestie nulla. Nunc molestie nec neque vitae pellentesque. Sed sed feugiat ex.
+
+                    Mauris quis semper turpis. Curabitur et ex odio. Phasellus molestie placerat lectus malesuada ullamcorper. Donec eu sapien in dolor fringilla rutrum et in elit. In pellentesque lorem erat, quis iaculis elit fermentum at. Donec laoreet lectus vitae purus commodo imperdiet. Nulla posuere, ligula egestas tristique laoreet, metus nisi tempor magna, ullamcorper ullamcorper tortor diam id eros. Pellentesque fermentum urna lectus, ut condimentum quam suscipit a.
+
+                    Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse a arcu vel arcu ultricies sollicitudin sit amet sed purus. Donec nulla risus, congue a nisi sed, sollicitudin elementum mauris. Phasellus posuere ex sit amet dui dictum interdum. Nulla sit amet egestas nisl. Donec quis maximus ipsum, eget placerat tellus. Sed fringilla egestas lacinia. Sed ultrices faucibus nibh eget elementum. Aenean et sodales quam. Vivamus sodales auctor dolor, nec finibus est. Morbi vel euismod eros, nec suscipit elit. Nam aliquet, tellus a consequat congue, sem purus efficitur velit, eget pretium ante metus vel ante.
+
+                    Nulla tristique velit sed commodo egestas. Sed nulla velit, iaculis vitae justo quis, semper suscipit dui. Maecenas varius erat ac hendrerit ultricies. Vestibulum ut ipsum imperdiet turpis vestibulum vestibulum. Nam porttitor semper mi, in venenatis lorem tincidunt nec. Nullam tincidunt metus sollicitudin est viverra, a sollicitudin justo ultricies. Sed ultricies volutpat tortor, at auctor neque consectetur ut. Praesent cursus vehicula varius. Maecenas quis sem vel nibh euismod tempor et sit amet nunc. Donec a fringilla mauris, nec euismod augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer cursus ante sit amet magna lacinia accumsan.
+
+                    Pellentesque ac ornare ante. Ut pharetra turpis diam, id porta nunc molestie ac. Nulla in dui a arcu hendrerit accumsan. Proin lectus dolor, ultricies vestibulum vestibulum et, interdum in nisl. Curabitur varius ligula vel metus accumsan, sit amet viverra arcu porttitor. Suspendisse non eros eros. Morbi ut elit auctor, ullamcorper risus eu, efficitur mi. Sed aliquet vitae mauris vel sodales. Nunc id interdum metus. Suspendisse est ligula, convallis in venenatis ut, viverra suscipit massa. Duis aliquam luctus fermentum. Aenean sagittis tincidunt nunc vestibulum egestas. Aliquam sed odio non ex commodo efficitur eget sed mauris. Sed gravida elit id ultrices pulvinar. Vivamus efficitur consequat lectus vitae pulvinar.
+                </div>
             </div>
 
-            <div id="bluejay">
-                lorem ipsum about bluejays
+            <div id="event">
+                <h3>EVENT</h3>
+
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum rutrum mauris, sit amet consequat augue iaculis vitae. Vestibulum viverra venenatis aliquam. Nullam id dictum purus, sit amet viverra ex. Donec efficitur orci id interdum tempor. Aenean maximus ut est faucibus tempus. Morbi ullamcorper metus vitae eros commodo, vehicula consectetur nisl dapibus. Praesent congue mi ut neque mattis tincidunt. Aliquam id tellus maximus, mollis lectus et, fermentum lacus. Maecenas at turpis vitae enim tincidunt tincidunt. Quisque nec molestie nulla. Nunc molestie nec neque vitae pellentesque. Sed sed feugiat ex.
+
+                    Mauris quis semper turpis. Curabitur et ex odio. Phasellus molestie placerat lectus malesuada ullamcorper. Donec eu sapien in dolor fringilla rutrum et in elit. In pellentesque lorem erat, quis iaculis elit fermentum at. Donec laoreet lectus vitae purus commodo imperdiet. Nulla posuere, ligula egestas tristique laoreet, metus nisi tempor magna, ullamcorper ullamcorper tortor diam id eros. Pellentesque fermentum urna lectus, ut condimentum quam suscipit a.
+
+                    Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse a arcu vel arcu ultricies sollicitudin sit amet sed purus. Donec nulla risus, congue a nisi sed, sollicitudin elementum mauris. Phasellus posuere ex sit amet dui dictum interdum. Nulla sit amet egestas nisl. Donec quis maximus ipsum, eget placerat tellus. Sed fringilla egestas lacinia. Sed ultrices faucibus nibh eget elementum. Aenean et sodales quam. Vivamus sodales auctor dolor, nec finibus est. Morbi vel euismod eros, nec suscipit elit. Nam aliquet, tellus a consequat congue, sem purus efficitur velit, eget pretium ante metus vel ante.
+
+                    Nulla tristique velit sed commodo egestas. Sed nulla velit, iaculis vitae justo quis, semper suscipit dui. Maecenas varius erat ac hendrerit ultricies. Vestibulum ut ipsum imperdiet turpis vestibulum vestibulum. Nam porttitor semper mi, in venenatis lorem tincidunt nec. Nullam tincidunt metus sollicitudin est viverra, a sollicitudin justo ultricies. Sed ultricies volutpat tortor, at auctor neque consectetur ut. Praesent cursus vehicula varius. Maecenas quis sem vel nibh euismod tempor et sit amet nunc. Donec a fringilla mauris, nec euismod augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer cursus ante sit amet magna lacinia accumsan.
+
+                    Pellentesque ac ornare ante. Ut pharetra turpis diam, id porta nunc molestie ac. Nulla in dui a arcu hendrerit accumsan. Proin lectus dolor, ultricies vestibulum vestibulum et, interdum in nisl. Curabitur varius ligula vel metus accumsan, sit amet viverra arcu porttitor. Suspendisse non eros eros. Morbi ut elit auctor, ullamcorper risus eu, efficitur mi. Sed aliquet vitae mauris vel sodales. Nunc id interdum metus. Suspendisse est ligula, convallis in venenatis ut, viverra suscipit massa. Duis aliquam luctus fermentum. Aenean sagittis tincidunt nunc vestibulum egestas. Aliquam sed odio non ex commodo efficitur eget sed mauris. Sed gravida elit id ultrices pulvinar. Vivamus efficitur consequat lectus vitae pulvinar.
+                </div>
             </div>
 
         </div>
-
     </section>
 
 </body>
