@@ -1,0 +1,164 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.container {
+    /*background-color: red;*/
+    width: 90vw;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container > div {
+    /*background-color: rgb(38, 74, 62);*/
+    margin-right: 51px; /*adds a margin on the right side of each div at specified # of px*/   
+}
+
+.interactivity {
+    /*background-color: rgb(228, 137, 26);*/
+    position: relative;
+    top: 0px; /*defines where the top begins*/
+    margin-top: 89px; /*defines where content begins*/
+}
+
+.narrative {
+    /*background-color: blueviolet;*/
+    color: #FFF;
+   
+    position: relative;
+    top: 0px;
+    padding: 86px 45px; /*height, width*/
+    overflow-y: auto; /*autoscroll*/
+
+    border: 5px solid #FFF;
+    border-radius: 30px;
+    
+    margin-top: 89px;
+
+    font-family: "Roboto Condensed";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+/*TYPOGRAPHY*/
+h1 {
+    color: #FFF;
+    font-family: "Pirata One";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+
+    line-height: normal;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #FFF;
+    font-family: "Pirata One";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+
+    line-height: normal;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+/*INPUT AND BUTTONS*/
+#character-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 27px;
+}
+
+#buttonGroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 27px;
+}
+
+#buttonGroup > button {
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+
+input[type="text"]{
+    background-color: black;
+    color: white;
+    width: 387px;
+    height: 55px;
+
+    border: 1px solid #FFF;
+    border-radius: 20px;
+
+    font-family: "Pirata One";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    line-height: normal;
+}
+
+input[type="text"]:focus {
+    background-color: white;
+    color: black;
+}
+
+#generate {
+    background-color: white;
+    color: black;
+
+    border: 1px solid #FFF;
+    border-radius: 20px;
+    padding: 4px 20px;
+
+    text-align: center;
+    font-family: "Pirata One";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#save {
+    background-color: black;
+    color: white;
+
+    border: 1px solid #FFF;
+    border-radius: 20px;
+    padding: 4px 20px;
+
+    text-align: center;
+    font-family: "Pirata One";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#d20 {
+    width: 281.25px;
+    height: 300.059px;
+    margin: 32px auto; /*centers position*/
+}
+
+#result { /*"Click to Roll" text*/
+    color: #FFF;
+    text-align: center;
+    font-family: "Pirata One";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 25px;
+}
