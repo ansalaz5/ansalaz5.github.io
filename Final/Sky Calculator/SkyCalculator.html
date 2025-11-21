@@ -16,64 +16,76 @@
     <body>
 
         <!--NAVIGATION BEGIN-->
-        <div id="menu">
-            <span class="material-symbols-outlined">menu</span>
-        </div>
-
-        <nav class="nav">
-            
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#calculator">Calculator</a></li>
-            </ul>
-        </nav>
+        <div class="navButtons">
+            <button id="aboutTab" class="active" onClick="updateTabs(this.id)">About</button>
+            <button id="calcTab" onClick="updateTabs(this.id)">Calculator</button>
+            <button id="three-btn" onClick="updateTabs(this.id)">DIV THREE</button>
+        </div> 
         <!--NAVIGATION END-->
 
-        
-        <div class="content">
-        
+
+        <div class="container">
+
             <header>
-                <h1>Sky Calculator</h1>  
+                <h1>Sky Calculator</h1>
             </header>
 
+            <div id="aboutPage">
+                <h2>About</h2>
 
-            <form class="inputGroup">
-                <p id="questionLabels">Number of Daily Heart Trades</p>
-                <input type="number" id="tradesInput" required>
+                <p id="aboutContent">lorem ipsum dolorem stuff here talking about what the calculator is and how to use it</p>
+            </div> 
 
-                <p id="questionLabels">Days left until Deadline</p>
-                <input type="number" id="daysInput" required> 
+            <div id="calcPage">
+                <h2>Candle Calculator</h2>
+            
+                <div class="calculator">
 
-                <p id="questionLabels">Candle Goal</p>
-                <input type="number" id="candGoalInput" required>
+                    <form class="inputGroup">
+                        <p id="questionLabels">Number of Daily Heart Trades</p>
+                        <input type="number" id="tradesInput" required>
 
-                <p id="questionLabels">Current amount of Candles</p>
-                <input type="number" id="currentCandInput" required> 
-            </form>
+                        <p id="questionLabels">Days left until Deadline</p>
+                        <input type="number" id="daysInput" required> 
 
-            <!--
-            <p>Number of Daily Heart Trades</p>
-            <input type="number" id="tradesInput" required>
+                        <p id="questionLabels">Candle Goal</p>
+                        <input type="number" id="candGoalInput" required>
 
-            <p>Days left until Deadline</p>
-            <input type="number" id="daysInput" required> 
+                        <p id="questionLabels">Current amount of Candles</p>
+                        <input type="number" id="currentCandInput" required> 
+                    </form>
 
-            <p>Candle Goal</p>
-            <input type="number" id="candGoalInput" required>
+                    <!--
+                    <p>Number of Daily Heart Trades</p>
+                    <input type="number" id="tradesInput" required>
 
-            <p>Current amount of Candles</p>
-            <input type="number" id="currentCandInput" required> <br> <br>
-            -->
+                    <p>Days left until Deadline</p>
+                    <input type="number" id="daysInput" required> 
 
-            <div id="submit">
-                <button onclick="calculate()"> Submit </button>
-            </div>
+                    <p>Candle Goal</p>
+                    <input type="number" id="candGoalInput" required>
 
-            <div id="output">
-                <h1 id="message"> </h1>
-            </div>
+                    <p>Current amount of Candles</p>
+                    <input type="number" id="currentCandInput" required> <br> <br>
+                    -->
 
-        </div>
+                    <div id="submit">
+                        <button onclick="calculate()"> Submit </button>
+                    </div>
+
+                    <div id="output">
+                        <h1 id="message"> </h1>
+                    </div>
+
+                </div>
+
+            </div> 
+
+
+            <div id="three"><h2>DIV THREE</h2></div> 
+    
+        </div> 
+        
 
         <script src="./sky-script.js"></script>
 
