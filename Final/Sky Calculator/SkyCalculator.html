@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
         <link href="./sky-styles.css" rel="stylesheet">
         <script src="./sky-script.js"></script>
 
@@ -13,8 +14,23 @@
     </head>
 
     <body>
+
+        <!--NAVIGATION BEGIN-->
+        <div id="menu">
+            <span class="material-symbols-outlined">menu</span>
+        </div>
+
+        <nav class="nav">
+            
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#calculator">Calculator</a></li>
+            </ul>
+        </nav>
+        <!--NAVIGATION END-->
+
         
-        <div class="container">
+        <div class="content">
         
             <header>
                 <h1>Sky Calculator</h1>  
@@ -32,7 +48,7 @@
                 <input type="number" id="candGoalInput" required>
 
                 <p id="questionLabels">Current amount of Candles</p>
-                <input type="number" id="currentCandInput" required> <br> <br>
+                <input type="number" id="currentCandInput" required> 
             </form>
 
             <!--
@@ -50,7 +66,7 @@
             -->
 
             <div id="submit">
-                <button onclick="myFunction()"> Submit </button>
+                <button onclick="calculate()"> Submit </button>
             </div>
 
             <div id="output">
