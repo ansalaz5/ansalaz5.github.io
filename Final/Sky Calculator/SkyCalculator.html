@@ -5,80 +5,61 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="./sky-styles.css" rel="stylesheet">
+        <script src="./sky-script.js"></script>
+
         <title>Sky Calculator</title>
     </head>
 
     <body>
-        <h1>Sky Calculator</h1>
+        
+        <div class="container">
+        
+            <header>
+                <h1>Sky Calculator</h1>  
+            </header>
 
 
-        <p>Number of Daily Heart Trades</p>
-        <input type="number" id="tradesInput" required>
+            <form class="inputGroup">
+                <p id="questionLabels">Number of Daily Heart Trades</p>
+                <input type="number" id="tradesInput" required>
 
-        <p>Days left until Deadline</p>
-        <input type="number" id="daysInput" required> 
+                <p id="questionLabels">Days left until Deadline</p>
+                <input type="number" id="daysInput" required> 
 
-        <p>Candle Goal</p>
-        <input type="number" id="candGoalInput" required>
+                <p id="questionLabels">Candle Goal</p>
+                <input type="number" id="candGoalInput" required>
 
-        <p>Current amount of Candles</p>
-        <input type="number" id="currentCandInput" required> <br> <br>
+                <p id="questionLabels">Current amount of Candles</p>
+                <input type="number" id="currentCandInput" required> <br> <br>
+            </form>
 
-        <button onclick="myFunction()"> Submit </button>
+            <!--
+            <p>Number of Daily Heart Trades</p>
+            <input type="number" id="tradesInput" required>
 
-        <h1 id="message"> </h1>
+            <p>Days left until Deadline</p>
+            <input type="number" id="daysInput" required> 
 
+            <p>Candle Goal</p>
+            <input type="number" id="candGoalInput" required>
 
-        <style>
-            body {background-color: darkslategray; text-align: center; color: floralwhite;}
-        </style>
+            <p>Current amount of Candles</p>
+            <input type="number" id="currentCandInput" required> <br> <br>
+            -->
 
-        <script>
-            //onClick, calculate button
-            function myFunction() {
+            <div id="submit">
+                <button onclick="myFunction()"> Submit </button>
+            </div>
 
-                // input number of friends you are sending daily hearts to
-                let trades = parseInt(document.getElementById('tradesInput').value);
-                console.log(typeof trades);
-                //let hearts = trades * 3;
+            <div id="output">
+                <h1 id="message"> </h1>
+            </div>
 
-                //input number of days left until deadline
-                let days = parseInt(document.getElementById('daysInput').value);  
-                console.log(typeof days);            
+        </div>
 
-                // input number of total desired candles by end of time period
-                let candGoal = parseInt(document.getElementById('candGoalInput').value);
-                console.log(typeof candGoal);
-
-                //input number of current candles
-                let currentCand = parseInt(document.getElementById('currentCandInput').value);
-                console.log(typeof currentCand);
-                
-
-                //calculation
-                let candPerDay = (((candGoal + ((trades*3)*days)) - currentCand) / days);
-                
-
-                // //EXAMPLE HERE
-                // let trades = 2
-                // let hearts = trades * 3;
-                // let days = 6;
-                // let candGoal = 80;
-                // let currentCand = 40;
-
-                // let candPerDay = ((candGoal + (hearts * days) - currentCand) / days);
-                // //calculation should equal 7.66666667 something
-
-                
-                let message = document.getElementById('message');
-
-                message.innerHTML = candPerDay.toFixed(1) + " testing";
-
-                console.log(candPerDay);
-
-                
-            }
-        </script>
+        <script src="./sky-script.js"></script>
 
     </body>
 </html>
