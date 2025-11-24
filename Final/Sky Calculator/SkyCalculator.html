@@ -17,8 +17,8 @@
 
         <!--NAVIGATION BEGIN-->
         <div class="navButtons">
-            <button id="aboutTab" class="active" onClick="updateTabs(this.id)">About</button>
-            <button id="calcTab" onClick="updateTabs(this.id)">Calculator</button>
+            <button id="aboutTab"  onClick="updateTabs(this.id)">About</button>
+            <button id="calcTab" class="active" onClick="updateTabs(this.id)">Calculator</button>
             <button id="three-btn" onClick="updateTabs(this.id)">DIV THREE</button>
         </div> 
         <!--NAVIGATION END-->
@@ -30,14 +30,29 @@
                 <h1>Sky Calculator</h1>
             </header>
 
+            <!--ABOUT PAGE-->
             <div id="aboutPage">
                 <h2>About</h2>
 
-                <p id="aboutContent">lorem ipsum dolorem stuff here talking about what the calculator is and how to use it</p>
+                <div class="aboutContent">
+                    <p>This is a currency calculator for the game <em>Sky:Children of the Light</em>. It is intended to help calculate how many candles you must acquire in a day to meet a stated goal in a certain amount of days. </p>
+                </div>
             </div> 
+            <!--ABOUT PAGE END-->
 
+            <!--CALCULATOR PAGE-->
             <div id="calcPage">
                 <h2>Candle Calculator</h2>
+
+                <div class="instructions">
+
+                    <h3> How to Use</h3>
+                    
+                    <p><strong><u>Number of Heart Trades:</u></strong> If you regularly send hearts daily, input the amount of hearts you send each day. (The calculation will account for the total amount spent on hearts to your total goal.) </p>
+                    <p><strong><u>Days left until Deadline:</u></strong> Input the amount of days you have to reach your goal.</p>
+                    <p><strong><u>Candle Goal:</u></strong> Input the total amount of candles you wish to have. (This will be the total amount of candles you have by the deadline, not how many you wish to collect in the time period.)</p>
+                    <p><strong><u>Current amount of Candles:</u></strong> Input the total amount of candles you currently have.</p>
+                </div>
             
                 <div class="calculator">
 
@@ -55,20 +70,6 @@
                         <input type="number" id="currentCandInput" required> 
                     </form>
 
-                    <!--
-                    <p>Number of Daily Heart Trades</p>
-                    <input type="number" id="tradesInput" required>
-
-                    <p>Days left until Deadline</p>
-                    <input type="number" id="daysInput" required> 
-
-                    <p>Candle Goal</p>
-                    <input type="number" id="candGoalInput" required>
-
-                    <p>Current amount of Candles</p>
-                    <input type="number" id="currentCandInput" required> <br> <br>
-                    -->
-
                     <div id="submit">
                         <button onclick="calculate()"> Submit </button>
                     </div>
@@ -80,6 +81,7 @@
                 </div>
 
             </div> 
+            <!--CALCULATOR PAGE END-->
 
 
             <div id="three"><h2>DIV THREE</h2></div> 
@@ -87,7 +89,7 @@
         </div> 
         
 
-        <script src="./sky-script.js"></script>
+
 
     </body>
 </html>
