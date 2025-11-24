@@ -28,13 +28,6 @@ switch (id) {
     about.style.display = "none"
     three.style.display = "none"
     break;
-  case "three-btn":
-  three.style.display = "block"
-    document.getElementById("three-btn").classList.add("active")
-    about.style.display = "none"
-    calc.style.display = "none"
-  
-    break;
      
   default:
     console.log ("error! if you see this, that means that there is an error in the switch statement and it's not passing the correct button id ")
