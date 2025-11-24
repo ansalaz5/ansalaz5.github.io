@@ -82,7 +82,7 @@ function calculate() {
 
     let message = document.getElementById('message');
 
-    message.innerHTML = candPerDay.toFixed(1) + " testing";
+    message.innerHTML = candPerDay.toFixed(1) + " candles needed per day";
 
     console.log(candPerDay);
 
