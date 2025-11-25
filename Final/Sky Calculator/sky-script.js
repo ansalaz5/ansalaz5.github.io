@@ -1,38 +1,45 @@
-// showing the easy way before the simple way :)  The elegant way is actually finding all buttons, and then for each of them in a loop adding an Event Listener.  
+//updateTabs function source reference: Ishrat Lallmamode
 
+//switch between tabs/pages
 function updateTabs(id){
   console.log(id) 
 
   let about = document.getElementById("aboutPage")
   let calc = document.getElementById("calcPage")
-  let three = document.getElementById("three")
-  // unlike in the homework where we put everything into an event listener, sometimes it's just easier to put everything into one function and have 1 switch statement. 
+  let season = document.getElementById("seasonPage")
 
-  let activeButton = document.getElementsByClassName("active")[0]//because all our buttons have their own unique ids, we can actually 
+  //stores which page user is currently on
+  let activeButton = document.getElementsByClassName("active")[0];
   
-  // let's remove the active button look 
-
+  //removes active button look after leaving the page
   activeButton.classList.remove("active")
 
-switch (id) {
-  case "aboutTab":
-    about.style.display = "block"
-    document.getElementById("aboutTab").classList.add("active")
-    calc.style.display = "none"
-    three.style.display = "none"
+  //toggles between tabs/pages
+  switch (id) {
+    case "aboutTab":
+      about.style.display = "block"
+      document.getElementById("aboutTab").classList.add("active")
+      calc.style.display = "none"
+      season.style.display = "none"
 
-    break;
-  case "calcTab":
-    calc.style.display = "block"
-    document.getElementById("calcTab").classList.add("active")
-    about.style.display = "none"
-    three.style.display = "none"
-    break;
-     
-  default:
-    console.log ("error! if you see this, that means that there is an error in the switch statement and it's not passing the correct button id ")
-}
+      break;
+    case "calcTab":
+      calc.style.display = "block"
+      document.getElementById("calcTab").classList.add("active")
+      about.style.display = "none"
+      season.style.display = "none"
+      break;
 
+    case "seasonTab":
+      season.style.display = "block"
+      document.getElementById("seasonTab").classList.add("active")
+      about.style.display = "none"
+      calc.style.display = "none"
+      break;
+      
+    default:
+      console.log ("error! if you see this, that means that there is an error in the switch statement and it's not passing the correct button id ")
+  }
 
 }
 
@@ -43,13 +50,13 @@ function calculate() {
     // input number of friends you are sending daily hearts to
     let trades = parseInt(document.getElementById('tradesInput').value);
     console.log(typeof trades);
-    let hearts = trades * 3;
+    let hearts = trades * 3; //amount of candles spent on hearts per day
 
     //input number of days left until deadline
     let days = parseInt(document.getElementById('daysInput').value);
     console.log(typeof days);
 
-    // input number of total desired candles by end of time period
+    //input number of total desired candles by end of time period
     let candGoal = parseInt(document.getElementById('candGoalInput').value);
     console.log(typeof candGoal);
 
@@ -62,23 +69,19 @@ function calculate() {
     let candPerDay = (((candGoal + (hearts * days)) - currentCand) / days);
 
 
-    // //EXAMPLE HERE
-    // let trades = 2
-    // let hearts = trades * 3;
-    // let days = 6;
-    // let candGoal = 80;
-    // let currentCand = 40;
-
-    // let candPerDay = ((candGoal + (hearts * days) - currentCand) / days);
-    // //calculation should equal 12.66666667 something
-
+    // EXAMPLE HERE
+    // trades = 2 (hearts = trades * 3)
+    // days = 6
+    // candGoal = 80
+    // currentCand = 40
+    // calculation should equal 12.66666667
 
     let message = document.getElementById('message');
 
+    //change message to output result 
     message.innerHTML = candPerDay.toFixed(1) + " candles needed per day";
 
     console.log(candPerDay);
 
 
 }
-
